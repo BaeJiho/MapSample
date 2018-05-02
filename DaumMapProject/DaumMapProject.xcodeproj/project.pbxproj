@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		58D8DB4E3B708DCC9432E10B /* Pods_DaumMapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC2FBCA3B1DEC835ACD73AE /* Pods_DaumMapProject.framework */; };
 		981BFF3E2099623C00BDE637 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981BFF3D2099623C00BDE637 /* KakaoOpenSDK.framework */; };
 		981BFF602099662B00BDE637 /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 981BFF442099662B00BDE637 /* map_pinup_custom@3x.png */; };
 		981BFF612099662B00BDE637 /* map_pin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 981BFF452099662B00BDE637 /* map_pin_custom.png */; };
@@ -51,6 +52,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F2AFB4DEBBB6817200FBF89 /* Pods-DaumMapProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaumMapProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaumMapProject/Pods-DaumMapProject.release.xcconfig"; sourceTree = "<group>"; };
+		7CC2FBCA3B1DEC835ACD73AE /* Pods_DaumMapProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaumMapProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		981BFF3D2099623C00BDE637 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		981BFF3F209964A000BDE637 /* DaumMapProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaumMapProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		981BFF442099662B00BDE637 /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
@@ -95,6 +98,7 @@
 		98CA374220995ACD00D686AB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98CA374520995ACD00D686AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		98CA374720995ACD00D686AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDA2348E020CBC3AD0CBBF9C /* Pods-DaumMapProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaumMapProject.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DaumMapProject/Pods-DaumMapProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,12 +115,22 @@
 				981BFF7D2099668500BDE637 /* OpenGLES.framework in Frameworks */,
 				981BFF7B2099662B00BDE637 /* DaumMap.framework in Frameworks */,
 				981BFF3E2099623C00BDE637 /* KakaoOpenSDK.framework in Frameworks */,
+				58D8DB4E3B708DCC9432E10B /* Pods_DaumMapProject.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2EB470102B12862AE3CA4D0F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FDA2348E020CBC3AD0CBBF9C /* Pods-DaumMapProject.debug.xcconfig */,
+				2F2AFB4DEBBB6817200FBF89 /* Pods-DaumMapProject.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		981BFF3C2099623C00BDE637 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +143,7 @@
 				981BFF7C2099668500BDE637 /* OpenGLES.framework */,
 				981BFF422099662B00BDE637 /* DaumMap.embeddedframework */,
 				981BFF3D2099623C00BDE637 /* KakaoOpenSDK.framework */,
+				7CC2FBCA3B1DEC835ACD73AE /* Pods_DaumMapProject.framework */,
 			);
 			name = Frameworks;
 			path = DaumMapProject/Frameworks;
@@ -183,6 +198,7 @@
 				98CA373A20995ACC00D686AB /* DaumMapProject */,
 				98CA373920995ACC00D686AB /* Products */,
 				981BFF3C2099623C00BDE637 /* Frameworks */,
+				2EB470102B12862AE3CA4D0F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -215,9 +231,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 98CA374A20995ACD00D686AB /* Build configuration list for PBXNativeTarget "DaumMapProject" */;
 			buildPhases = (
+				38E604F94831B28D7B27356D /* [CP] Check Pods Manifest.lock */,
 				98CA373420995ACC00D686AB /* Sources */,
 				98CA373520995ACC00D686AB /* Frameworks */,
 				98CA373620995ACC00D686AB /* Resources */,
+				79AD0700FE86D30FD656DE7F /* [CP] Embed Pods Frameworks */,
+				60A75474C07AD81B56D75A86 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -301,6 +320,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		38E604F94831B28D7B27356D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DaumMapProject-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60A75474C07AD81B56D75A86 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaumMapProject/Pods-DaumMapProject-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		79AD0700FE86D30FD656DE7F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DaumMapProject/Pods-DaumMapProject-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DaumMapProject/Pods-DaumMapProject-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		98CA373420995ACC00D686AB /* Sources */ = {
@@ -450,6 +523,7 @@
 		};
 		98CA374B20995ACD00D686AB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FDA2348E020CBC3AD0CBBF9C /* Pods-DaumMapProject.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -462,10 +536,7 @@
 					"$(PROJECT_DIR)/DaumMapProject/Frameworks/DaumMap.embeddedframework",
 				);
 				INFOPLIST_FILE = DaumMapProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidBae.DaumMapProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -478,6 +549,7 @@
 		};
 		98CA374C20995ACD00D686AB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F2AFB4DEBBB6817200FBF89 /* Pods-DaumMapProject.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -490,10 +562,7 @@
 					"$(PROJECT_DIR)/DaumMapProject/Frameworks/DaumMap.embeddedframework",
 				);
 				INFOPLIST_FILE = DaumMapProject/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = "-all_load";
 				PRODUCT_BUNDLE_IDENTIFIER = com.davidBae.DaumMapProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";

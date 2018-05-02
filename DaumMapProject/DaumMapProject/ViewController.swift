@@ -14,22 +14,26 @@ class ViewController: UIViewController{
   @IBOutlet var mainMap: MTMapView!
   override func viewDidLoad() {
     super.viewDidLoad()
-//    mainMap.delegate = self
+    mainMap.delegate = self
     mainMap.baseMapType = .standard
+    mainMap.currentLocationTrackingMode = .onWithHeading
     
   }
 }
-//
-//extension ViewController: MTMapViewDelegate {
-//  <#code#>
-//}
+
+extension ViewController: MTMapViewDelegate {
+  
+  func mapView(_ mapView: MTMapView!, failedUpdatingCurrentLocationWithError error: Error!) {
+    print(error)
+  }
+}
 
 extension ViewController: CLLocationManagerDelegate {
   func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
     if let locations = manager.location?.coordinate {
       let lat = String(locations.latitude)
       let lon = String(locations.longitude)
-      print(lat,lon)
+      print("lat:\(lat), lon: \(lon) ")
     }
   }
 }

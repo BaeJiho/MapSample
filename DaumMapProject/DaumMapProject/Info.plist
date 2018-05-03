@@ -2,6 +2,12 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSLocationUsageDescription</key>
+	<string>GPS 위치정보를 공유합니다.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>GPS 위치정보를 공유합니다.</string>
+	<key>NSLocation WhenI</key>
+	<string></string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

@@ -15,29 +15,51 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DaumMapProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <searchBar contentMode="redraw" placeholder="검색하세요!" scopeBarBackgroundImage=" " translatesAutoresizingMaskIntoConstraints="NO" id="oM7-YO-JWH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SNt-PZ-dMh"/>
+                                </connections>
+                            </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-6z-Szb" customClass="MTMapView">
-                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <rect key="frame" x="0.0" y="56" width="375" height="547"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bR7-hn-ers" appends="YES" id="r77-g8-NgH"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="KUf-6z-Szb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kam-Ux-gkN"/>
+                            <constraint firstItem="oM7-YO-JWH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LPt-3M-o6q"/>
+                            <constraint firstItem="oM7-YO-JWH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VHy-92-uwc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUf-6z-Szb" secondAttribute="trailing" id="VW4-kV-vOH"/>
-                            <constraint firstItem="KUf-6z-Szb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YtL-EP-nap"/>
+                            <constraint firstItem="oM7-YO-JWH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZIL-eC-YOo"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KUf-6z-Szb" secondAttribute="bottom" id="nYS-wJ-zSQ"/>
+                            <constraint firstItem="KUf-6z-Szb" firstAttribute="top" secondItem="oM7-YO-JWH" secondAttribute="bottom" id="vSD-n1-xvi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="d9A-ge-y1w"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="mainMap" destination="KUf-6z-Szb" id="8PG-dG-roc"/>
+                        <outlet property="searchBarVC" destination="oM7-YO-JWH" id="iM4-si-qvC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bR7-hn-ers">
+                    <connections>
+                        <action selector="removeKeyboard:" destination="BYZ-38-t0r" id="gJs-lS-DE8"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1076" y="133.5832083958021"/>
         </scene>
@@ -60,4 +82,7 @@
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
+    <resources>
+        <image name=" " width="16" height="16"/>
+    </resources>
 </document>

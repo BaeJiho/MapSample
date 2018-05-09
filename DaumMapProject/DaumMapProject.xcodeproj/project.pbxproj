@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		58D8DB4E3B708DCC9432E10B /* Pods_DaumMapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC2FBCA3B1DEC835ACD73AE /* Pods_DaumMapProject.framework */; };
+		980A905220A0A760001744C9 /* BaseBallMainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905120A0A760001744C9 /* BaseBallMainList.swift */; };
+		980A905B20A0AE3A001744C9 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905920A0AE3A001744C9 /* MainCell.swift */; };
+		980A905E20A12484001744C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905D20A12484001744C9 /* MainViewController.swift */; };
+		980A906020A2BE8B001744C9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905F20A2BE8B001744C9 /* DetailViewController.swift */; };
+		980ED476209B03640020ADB0 /* BaseBallDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980ED475209B03640020ADB0 /* BaseBallDataModel.swift */; };
+		980ED478209C09C30020ADB0 /* BaseBallStadiumList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980ED477209C09C30020ADB0 /* BaseBallStadiumList.swift */; };
 		981BFF3E2099623C00BDE637 /* KakaoOpenSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 981BFF3D2099623C00BDE637 /* KakaoOpenSDK.framework */; };
 		981BFF602099662B00BDE637 /* map_pinup_custom@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 981BFF442099662B00BDE637 /* map_pinup_custom@3x.png */; };
 		981BFF612099662B00BDE637 /* map_pin_custom.png in Resources */ = {isa = PBXBuildFile; fileRef = 981BFF452099662B00BDE637 /* map_pin_custom.png */; };
@@ -54,6 +60,12 @@
 /* Begin PBXFileReference section */
 		2F2AFB4DEBBB6817200FBF89 /* Pods-DaumMapProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaumMapProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaumMapProject/Pods-DaumMapProject.release.xcconfig"; sourceTree = "<group>"; };
 		7CC2FBCA3B1DEC835ACD73AE /* Pods_DaumMapProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaumMapProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		980A905120A0A760001744C9 /* BaseBallMainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBallMainList.swift; sourceTree = "<group>"; };
+		980A905920A0AE3A001744C9 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
+		980A905D20A12484001744C9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		980A905F20A2BE8B001744C9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		980ED475209B03640020ADB0 /* BaseBallDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBallDataModel.swift; sourceTree = "<group>"; };
+		980ED477209C09C30020ADB0 /* BaseBallStadiumList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBallStadiumList.swift; sourceTree = "<group>"; };
 		981BFF3D2099623C00BDE637 /* KakaoOpenSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = KakaoOpenSDK.framework; sourceTree = "<group>"; };
 		981BFF3F209964A000BDE637 /* DaumMapProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DaumMapProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		981BFF442099662B00BDE637 /* map_pinup_custom@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_pinup_custom@3x.png"; sourceTree = "<group>"; };
@@ -131,6 +143,25 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		980ED472209B02BD0020ADB0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				980ED475209B03640020ADB0 /* BaseBallDataModel.swift */,
+				980ED477209C09C30020ADB0 /* BaseBallStadiumList.swift */,
+				980A905120A0A760001744C9 /* BaseBallMainList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		980ED473209B02C70020ADB0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				98CA373F20995ACC00D686AB /* Main.storyboard */,
+				98CA374420995ACD00D686AB /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		981BFF3C2099623C00BDE637 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +226,8 @@
 		98CA372F20995ACC00D686AB = {
 			isa = PBXGroup;
 			children = (
+				980ED473209B02C70020ADB0 /* View */,
+				980ED472209B02BD0020ADB0 /* Model */,
 				98CA373A20995ACC00D686AB /* DaumMapProject */,
 				98CA373920995ACC00D686AB /* Products */,
 				981BFF3C2099623C00BDE637 /* Frameworks */,
@@ -215,9 +248,10 @@
 			children = (
 				98CA373B20995ACC00D686AB /* AppDelegate.swift */,
 				98CA373D20995ACC00D686AB /* ViewController.swift */,
-				98CA373F20995ACC00D686AB /* Main.storyboard */,
+				980A905D20A12484001744C9 /* MainViewController.swift */,
+				980A905F20A2BE8B001744C9 /* DetailViewController.swift */,
+				980A905920A0AE3A001744C9 /* MainCell.swift */,
 				98CA374220995ACD00D686AB /* Assets.xcassets */,
-				98CA374420995ACD00D686AB /* LaunchScreen.storyboard */,
 				98CA374720995ACD00D686AB /* Info.plist */,
 				981BFF3F209964A000BDE637 /* DaumMapProject-Bridging-Header.h */,
 			);
@@ -380,8 +414,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				980A905E20A12484001744C9 /* MainViewController.swift in Sources */,
+				980ED476209B03640020ADB0 /* BaseBallDataModel.swift in Sources */,
+				980ED478209C09C30020ADB0 /* BaseBallStadiumList.swift in Sources */,
+				980A905B20A0AE3A001744C9 /* MainCell.swift in Sources */,
 				98CA373E20995ACC00D686AB /* ViewController.swift in Sources */,
+				980A905220A0A760001744C9 /* BaseBallMainList.swift in Sources */,
 				98CA373C20995ACC00D686AB /* AppDelegate.swift in Sources */,
+				980A906020A2BE8B001744C9 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

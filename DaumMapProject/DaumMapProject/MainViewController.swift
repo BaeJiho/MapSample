@@ -12,11 +12,10 @@ class MainViewController: UIViewController {
   
   @IBOutlet var mainCollerctionView: UICollectionView!
 
-  var list = [1, 2, 3, 4, 5, 6, 7, 8 ,9 , 10]
+  var list = ["hanwha","lotte","nexen"]
   var locationData: [String: String] = ["":""]
   override func viewDidLoad() {
     super.viewDidLoad()
-//    self.navigationController?.setNavigationBarHidden(true, animated: true)
   }
   
   override func viewWillAppear(_ animated: Bool) {
@@ -28,11 +27,19 @@ class MainViewController: UIViewController {
     super.viewWillDisappear(true)
     self.navigationController?.setNavigationBarHidden(false, animated: false)
   }
+  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    if segue.identifier == "ViewController" {
+      guard let nextVC = segue.destination as? ViewController else{return}
+//      nextVC.locationData = 
+    }
+  }
 }
 
 extension MainViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    performSegue(withIdentifier: "ViewController", sender: self)
+    if indexPath.row == 0 {
+      performSegue(withIdentifier: "ViewController", sender: self)
+    }
   }
 }
 

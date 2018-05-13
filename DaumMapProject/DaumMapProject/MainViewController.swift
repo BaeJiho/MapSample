@@ -13,30 +13,27 @@ class MainViewController: UIViewController {
   @IBOutlet var mainCollerctionView: UICollectionView!
 
   var list = [1, 2, 3, 4, 5, 6, 7, 8 ,9 , 10]
+  var locationData: [String: String] = ["":""]
   override func viewDidLoad() {
     super.viewDidLoad()
-    self.navigationController?.setNavigationBarHidden(true, animated: true)
+//    self.navigationController?.setNavigationBarHidden(true, animated: true)
   }
   
-  override func viewDidDisappear(_ animated: Bool) {
-    super.viewDidDisappear(true)
-    self.navigationController?.setNavigationBarHidden(true, animated: true)
+  override func viewWillAppear(_ animated: Bool) {
+    super.viewWillAppear(true)
+    self.navigationController?.setNavigationBarHidden(true, animated: false)
   }
   
+  override func viewWillDisappear(_ animated: Bool) {
+    super.viewWillDisappear(true)
+    self.navigationController?.setNavigationBarHidden(false, animated: false)
+  }
 }
 
 extension MainViewController: UICollectionViewDelegate {
   func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-    
-    let sb = UIStoryboard(name: "Main", bundle: nil)
-    let detailVC = sb.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-    self.navigationController?.pushViewController(detailVC, animated: true)
+    performSegue(withIdentifier: "ViewController", sender: self)
   }
-  
-//  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//    guard let nextVC = segue.destination as? ViewController else { return }
-//    nextVC.locationData =
-//  }
 }
 
 

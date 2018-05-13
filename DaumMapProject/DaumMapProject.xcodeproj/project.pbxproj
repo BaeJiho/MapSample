@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		58D8DB4E3B708DCC9432E10B /* Pods_DaumMapProject.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CC2FBCA3B1DEC835ACD73AE /* Pods_DaumMapProject.framework */; };
-		980A905220A0A760001744C9 /* BaseBallMainList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905120A0A760001744C9 /* BaseBallMainList.swift */; };
 		980A905B20A0AE3A001744C9 /* MainCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905920A0AE3A001744C9 /* MainCell.swift */; };
 		980A905E20A12484001744C9 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905D20A12484001744C9 /* MainViewController.swift */; };
 		980A906020A2BE8B001744C9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980A905F20A2BE8B001744C9 /* DetailViewController.swift */; };
@@ -60,7 +59,6 @@
 /* Begin PBXFileReference section */
 		2F2AFB4DEBBB6817200FBF89 /* Pods-DaumMapProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DaumMapProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-DaumMapProject/Pods-DaumMapProject.release.xcconfig"; sourceTree = "<group>"; };
 		7CC2FBCA3B1DEC835ACD73AE /* Pods_DaumMapProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DaumMapProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		980A905120A0A760001744C9 /* BaseBallMainList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseBallMainList.swift; sourceTree = "<group>"; };
 		980A905920A0AE3A001744C9 /* MainCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCell.swift; sourceTree = "<group>"; };
 		980A905D20A12484001744C9 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		980A905F20A2BE8B001744C9 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 			children = (
 				980ED475209B03640020ADB0 /* BaseBallDataModel.swift */,
 				980ED477209C09C30020ADB0 /* BaseBallStadiumList.swift */,
-				980A905120A0A760001744C9 /* BaseBallMainList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,8 +244,8 @@
 			isa = PBXGroup;
 			children = (
 				98CA373B20995ACC00D686AB /* AppDelegate.swift */,
-				98CA373D20995ACC00D686AB /* ViewController.swift */,
 				980A905D20A12484001744C9 /* MainViewController.swift */,
+				98CA373D20995ACC00D686AB /* ViewController.swift */,
 				980A905F20A2BE8B001744C9 /* DetailViewController.swift */,
 				980A905920A0AE3A001744C9 /* MainCell.swift */,
 				98CA374220995ACD00D686AB /* Assets.xcassets */,
@@ -419,7 +416,6 @@
 				980ED478209C09C30020ADB0 /* BaseBallStadiumList.swift in Sources */,
 				980A905B20A0AE3A001744C9 /* MainCell.swift in Sources */,
 				98CA373E20995ACC00D686AB /* ViewController.swift in Sources */,
-				980A905220A0A760001744C9 /* BaseBallMainList.swift in Sources */,
 				98CA373C20995ACC00D686AB /* AppDelegate.swift in Sources */,
 				980A906020A2BE8B001744C9 /* DetailViewController.swift in Sources */,
 			);

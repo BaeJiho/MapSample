@@ -16,19 +16,11 @@
             <objects>
                 <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="DaumMapProject" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="검색하세요!" scopeBarBackgroundImage=" " translatesAutoresizingMaskIntoConstraints="NO" id="oM7-YO-JWH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
-                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="SNt-PZ-dMh"/>
-                                </connections>
-                            </searchBar>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-6z-Szb" customClass="MTMapView">
-                                <rect key="frame" x="0.0" y="56" width="375" height="547"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <gestureRecognizers/>
                                 <connections>
@@ -38,21 +30,16 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="KUf-6z-Szb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kam-Ux-gkN"/>
-                            <constraint firstItem="oM7-YO-JWH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="LPt-3M-o6q"/>
-                            <constraint firstItem="oM7-YO-JWH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="VHy-92-uwc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KUf-6z-Szb" secondAttribute="trailing" id="VW4-kV-vOH"/>
-                            <constraint firstItem="oM7-YO-JWH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ZIL-eC-YOo"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KUf-6z-Szb" secondAttribute="bottom" id="nYS-wJ-zSQ"/>
-                            <constraint firstItem="KUf-6z-Szb" firstAttribute="top" secondItem="oM7-YO-JWH" secondAttribute="bottom" id="vSD-n1-xvi"/>
+                            <constraint firstItem="KUf-6z-Szb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ae6-T8-VvX"/>
+                            <constraint firstItem="KUf-6z-Szb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="u6T-cq-aXm"/>
+                            <constraint firstItem="KUf-6z-Szb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="w66-sT-3QZ"/>
+                            <constraint firstItem="KUf-6z-Szb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="yIY-bV-9P7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="d9A-ge-y1w"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
                         <outlet property="mainMap" destination="KUf-6z-Szb" id="8PG-dG-roc"/>
-                        <outlet property="searchBarVC" destination="oM7-YO-JWH" id="iM4-si-qvC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -62,7 +49,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1978" y="134"/>
+            <point key="canvasLocation" x="1893.5999999999999" y="126.38680659670166"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="06q-UF-3HB">
@@ -129,7 +116,7 @@
                                         </view>
                                         <constraints>
                                             <constraint firstAttribute="trailingMargin" secondItem="FTa-XE-2Q1" secondAttribute="trailing" id="Jge-Em-RNp"/>
-                                            <constraint firstItem="FTa-XE-2Q1" firstAttribute="leading" secondItem="yrF-2R-xHG" secondAttribute="leadingMargin" id="ZHc-ou-Sic"/>
+                                            <constraint firstItem="FTa-XE-2Q1" firstAttribute="leading" secondItem="yrF-2R-xHG" secondAttribute="leadingMargin" id="N7D-mb-blt"/>
                                             <constraint firstItem="FTa-XE-2Q1" firstAttribute="top" secondItem="yrF-2R-xHG" secondAttribute="topMargin" id="gtS-hh-W0I"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="FTa-XE-2Q1" secondAttribute="bottom" id="pYI-tt-z6x"/>
                                         </constraints>
@@ -153,9 +140,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aww-sp-gF1"/>
                     </view>
-                    <navigationItem key="navigationItem" id="qMh-Os-amX"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="qMh-Os-amX"/>
                     <connections>
                         <outlet property="mainCollerctionView" destination="gkb-0D-jbf" id="1Na-yT-QzP"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="ViewController" id="Y5M-y4-fd2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSp-p0-c7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -163,7 +151,4 @@
             <point key="canvasLocation" x="1077.5999999999999" y="133.5832083958021"/>
         </scene>
     </scenes>
-    <resources>
-        <image name=" " width="16" height="16"/>
-    </resources>
 </document>
